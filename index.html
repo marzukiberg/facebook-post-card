@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook Post Card Clone</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="post-card">
+        <div class="post-card-header">
+          <div class="profile">
+            <img src="images/profile.jpg" alt="Profile" class="profile-pic" />
+            <div class="profile-info">
+              <strong class="profile-name">Marzuki</strong>
+              <span class="post-info"
+                >3 Jam &SmallCircle;
+                <i class="fa fa-globe" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+
+          <button class="action-btn">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="post-card-body">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. A maiores
+            itaque praesentium saepe vero laboriosam temporibus rerum commodi
+            quae quos eum impedit autem, at recusandae iure doloribus dolorem
+            expedita voluptate?
+          </p>
+          <img src="images/post.jpg" alt="Post Image" />
+        </div>
+        <div class="post-card-footer">
+          <div class="footer-info">
+            <div class="react-count">
+              <img src="images/like.png" alt="Like" />
+              <img src="images/love.png" alt="Love" />
+              <span class="count">1.322</span>
+            </div>
+            <div class="react-info">
+              <span>66 Komentar</span> &SmallCircle;
+              <span>132 Kali Dibagikan</span>
+            </div>
+          </div>
+          <div class="footer-action hide">
+            <div class="more-react">
+              <div class="dot">
+                <span>&dot;</span>
+                <span>&dot;</span>
+                <span>&dot;</span>
+                <span>&dot;</span>
+                <span>&dot;</span>
+                <span>&dot;</span>
+                <span>&dot;</span>
+                <span>&dot;</span>
+              </div>
+              <div class="more-react-buttons">
+                <button>
+                  <img class="react-image" src="images/like.gif" alt="" />
+                </button>
+                <button>
+                  <img src="images/love.gif" alt="" />
+                </button>
+                <button>
+                  <img src="images/laugh.gif" alt="" />
+                </button>
+                <button>
+                  <img src="images/wow.gif" alt="" />
+                </button>
+                <button>
+                  <img src="images/sad.gif" alt="" />
+                </button>
+                <button>
+                  <img src="images/angry.gif" alt="" />
+                </button>
+              </div>
+            </div>
+            <button id="like-button" data-long-press-delay="500">
+              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Suka
+            </button>
+            <button>
+              <i class="fa fa-comment-o" aria-hidden="true"></i> Komentar
+            </button>
+            <button>
+              <i class="fa fa-share" aria-hidden="true"></i> Bagikan
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- long press library, https://github.com/john-doherty/long-press -->
+    <script src="js/long-press-event.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

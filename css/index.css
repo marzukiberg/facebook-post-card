@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.post-card {
+  width: 100vw;
+}
+
+/* POST CARD HEADER */
+.post-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px;
+}
+.profile {
+  display: flex;
+}
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.profile-info {
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.post-info {
+  font-size: 14px;
+  color: gray;
+}
+.action-btn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.action-btn:hover {
+  background-color: #eaeaea;
+}
+/* POST CARD HEADER */
+
+/* POST CARD BODY */
+.post-card-body p {
+  margin: 16px;
+  margin-top: 0;
+}
+.post-card-body img {
+  width: 100vw;
+}
+/* POST CARD BODY */
+
+/* POST CARD FOOTER */
+.footer-info {
+  display: flex;
+  margin: 16px;
+  justify-content: space-between;
+  font-size: 14px;
+  color: gray;
+}
+.react-count {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.react-count img {
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+}
+.footer-action {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+}
+.footer-action button {
+  background-color: transparent;
+  font-size: 16px;
+  padding: 16px 0;
+  width: 100%;
+  color: gray;
+  border: none;
+  outline: none;
+}
+.footer-action button:hover {
+  background-color: #eaeaea;
+}
+/* POST CARD FOOTER */
+
+/* MORE REACTS */
+.more-react {
+  transform: scale(0);
+  transition: 0.1s;
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+.more-react .dot {
+  display: flex;
+  height: 100%;
+  color: gray;
+  justify-content: space-around;
+  align-items: center;
+}
+.more-react-buttons {
+  transition: 0.1s;
+  transform-origin: bottom;
+  transform: scale(0);
+  position: absolute;
+  bottom: 60px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 1px gray;
+  margin-left: 4px;
+  height: 50px;
+  border-radius: 25px;
+}
+.more-react button,
+.more-react button:hover {
+  background-color: transparent;
+  outline: none;
+}
+.more-react button img {
+  width: 45px;
+  height: 45px;
+  transition: 0.1s;
+  object-fit: cover;
+  object-position: center;
+}
+.more-react button:hover img {
+  width: 80px;
+  height: 80px;
+  margin: 0 -16px 20px;
+}
+/* MORE REACTS */
+
+/* SHOW MORE REACT */
+.footer-action.show .more-react,
+.footer-action.show .more-react-buttons {
+  transform: scale(1);
+}
