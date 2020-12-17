@@ -9,6 +9,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
@@ -43,14 +47,14 @@
             <div class="react-count">
               <img src="images/like.png" alt="Like" />
               <img src="images/love.png" alt="Love" />
-              <span class="count">1.322</span>
+              <span id="react-counter" class="count">1.322</span>
             </div>
             <div class="react-info">
               <span>66 Komentar</span> &SmallCircle;
               <span>132 Kali Dibagikan</span>
             </div>
           </div>
-          <div class="footer-action hide">
+          <div class="footer-action">
             <div class="more-react">
               <div class="dot">
                 <span>&dot;</span>
@@ -63,36 +67,119 @@
                 <span>&dot;</span>
               </div>
               <div class="more-react-buttons">
-                <button>
+                <button id="like">
                   <img class="react-image" src="images/like.gif" alt="" />
                 </button>
-                <button>
+                <button id="love">
                   <img src="images/love.gif" alt="" />
                 </button>
-                <button>
+                <button id="laugh">
                   <img src="images/laugh.gif" alt="" />
                 </button>
-                <button>
+                <button id="wow">
                   <img src="images/wow.gif" alt="" />
                 </button>
-                <button>
+                <button id="sad">
                   <img src="images/sad.gif" alt="" />
                 </button>
-                <button>
+                <button id="angry">
                   <img src="images/angry.gif" alt="" />
                 </button>
               </div>
             </div>
             <button id="like-button" data-long-press-delay="500">
-              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Suka
+              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+              <span>Suka</span>
+            </button>
+            <button id="comments-button">
+              <i class="fa fa-comment-o" aria-hidden="true"></i>
+              <span>Komentar</span>
             </button>
             <button>
-              <i class="fa fa-comment-o" aria-hidden="true"></i> Komentar
-            </button>
-            <button>
-              <i class="fa fa-share" aria-hidden="true"></i> Bagikan
+              <i class="fa fa-share" aria-hidden="true"></i>
+              <span>Bagikan</span>
             </button>
           </div>
+
+          <!-- comments -->
+          <div class="comments-section">
+            <div class="comments-header">
+              <div class="react-count">
+                <img src="images/like.png" alt="Like" />
+                <img src="images/love.png" alt="Love" />
+                <span id="react-counter" class="count">1.322</span>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </div>
+              <button class="btn-close-comments" id="btn-close-comments">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="comments-body">
+              <button id="btn-filter-comments">
+                Paling Relevan
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+              </button>
+              <div class="comments-card">
+                <div class="comments-image">
+                  <img src="images/profile.jpg" alt="User Image" />
+                  <span></span>
+                </div>
+                <div>
+                  <div class="comments-text">
+                    <strong>Marzuki</strong>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Suscipit id dolores beatae voluptatum porro consectetur
+                      repellendus, reprehenderit esse. Et laborum cum similique
+                      molestiae magni, at quasi quos doloremque voluptatibus!
+                      Harum.
+                    </p>
+                  </div>
+                  <div class="comments-action">
+                    <div><b>18 Menit</b><b>Suka</b><b>Balas</b></div>
+                    <div class="comments-react">
+                      <span>4</span> <img src="images/love.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="comments-reply">
+                    <img src="images/profile.jpg" alt="User Image" />
+                    <strong>Marzuki</strong>
+                    <span>Mantap</span>
+                  </div>
+                </div>
+              </div>
+              <div class="comments-card">
+                <div class="comments-image">
+                  <img src="images/profile.jpg" alt="User Image" />
+                </div>
+                <div>
+                  <div class="comments-text">
+                    <strong>Marzuki</strong>
+                    <p>Bengek hyung...</p>
+                  </div>
+                  <div class="comments-action">
+                    <div><b>18 Menit</b><b>Suka</b><b>Balas</b></div>
+                    <div class="comments-react">
+                      <span>42</span> <img src="images/laugh.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comments-footer">
+              <button><i class="fa fa-camera" aria-hidden="true"></i></button>
+              <div class="input">
+                <input type="text" placeholder="Tulis komentar..." />
+                <button>
+                  <i class="fa fa-video-camera" aria-hidden="true"></i>
+                </button>
+                <button>
+                  <i class="fa fa-smile-o" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- comments -->
         </div>
       </div>
     </div>
