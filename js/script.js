@@ -24,7 +24,6 @@ function updateState() {
     case "like":
       likeButton.innerHTML = `<img src="images/like.png" width="16" height="16">
       <span class="blue">Suka</span>`;
-      toggleMoreReacts();
       break;
     case "love":
       likeButton.innerHTML = `<img src="images/love.png" width="16" height="16">
@@ -51,7 +50,7 @@ function updateState() {
   }
 }
 
-function toggleMoreReacts() {
+function toggleMoreReacts(e) {
   footerAction.classList.toggle("show-react");
 }
 function toggleLike() {
@@ -69,11 +68,11 @@ function toggleComments() {
 }
 
 // trigger
-likeButton.addEventListener("long-press", toggleMoreReacts);
-likeButton.addEventListener("click", () => {
+likeButton.addEventListener("click", (e) => {
   state.react = state.react == null ? "like" : null;
   updateState();
 });
+likeButton.addEventListener("long-press", toggleMoreReacts);
 window.addEventListener(
   "mouseup",
   () => footerAction.classList.contains("show-react") && toggleMoreReacts()
