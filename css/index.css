@@ -8,7 +8,15 @@
 .blue {
   color: #4267b2;
 }
-
+.pink {
+  color: #f52c4c;
+}
+.yellow {
+  color: #ffda6b;
+}
+.red {
+  color: #f74f59;
+}
 .container {
   position: relative;
   max-width: 360px;
@@ -204,8 +212,8 @@
 /* MORE REACTS */
 
 /* SHOW MORE REACT */
-.footer-action.show-react .more-react,
-.footer-action.show-react .more-react-buttons {
+.footer-action.show .more-react,
+.footer-action.show .more-react-buttons {
   transform: scale(1);
 }
 

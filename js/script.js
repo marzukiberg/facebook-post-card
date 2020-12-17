@@ -25,6 +25,7 @@ function updateState() {
     case "like":
       likeButton.innerHTML = `<img src="images/like.png" width="16" height="16">
       <span class="blue">Suka</span>`;
+      footerAction.classList.contains("show") ? toggleMoreReacts() : null;
       break;
     case "love":
       likeButton.innerHTML = `<img src="images/love.png" width="16" height="16">
@@ -36,6 +37,11 @@ function updateState() {
       <span class="yellow">Haha</span>`;
       toggleMoreReacts();
       break;
+    case "wow":
+      likeButton.innerHTML = `<img src="images/wow.png" width="16" height="16">
+      <span class="yellow">Wow</span>`;
+      toggleMoreReacts();
+      break;
     case "sad":
       likeButton.innerHTML = `<img src="images/sad.png" width="16" height="16">
         <span class="yellow">Sedih</span>`;
@@ -43,7 +49,7 @@ function updateState() {
       break;
     case "angry":
       likeButton.innerHTML = `<img src="images/angry.png" width="16" height="16">
-          <span class="yellow">Marah</span>`;
+          <span class="red">Marah</span>`;
       toggleMoreReacts();
       break;
     default:
@@ -55,17 +61,7 @@ function showMoreAction() {
   moreAction.classList.toggle("show");
 }
 function toggleMoreReacts(e) {
-  footerAction.classList.toggle("show-react");
-}
-function toggleLike() {
-  likeButton.innerHTML = `<img src="images/like.png" width="16" height="16">
-  <span class="blue">Suka</span>`;
-  toggleMoreReacts();
-}
-function toggleLove() {
-  likeButton.innerHTML = `<img src="images/love.png" width="16" height="16">
-  <span class="pink">Super</span>`;
-  toggleMoreReacts();
+  footerAction.classList.toggle("show");
 }
 function toggleComments() {
   commentsSection.classList.toggle("show");
@@ -79,7 +75,7 @@ likeButton.addEventListener("click", (e) => {
 likeButton.addEventListener("long-press", toggleMoreReacts);
 window.addEventListener(
   "mouseup",
-  () => footerAction.classList.contains("show-react") && toggleMoreReacts()
+  () => footerAction.classList.contains("show") && toggleMoreReacts()
 );
 actionBtn.addEventListener("click", showMoreAction);
 window.addEventListener(
