@@ -7,8 +7,9 @@ const reactCounter = $("#react-counter"),
   btnCloseComments = $("#btn-close-comments"),
   footerAction = $(".footer-action"),
   moreReactButtons = $(".more-react-buttons"),
-  like = $("#like"),
-  love = $("#love");
+  actionBtn = $(".action-btn"),
+  moreAction = $(".more-action");
+(like = $("#like")), (love = $("#love"));
 let state = {
   likes: 1322,
   react: null,
@@ -50,6 +51,9 @@ function updateState() {
   }
 }
 
+function showMoreAction() {
+  moreAction.classList.toggle("show");
+}
 function toggleMoreReacts(e) {
   footerAction.classList.toggle("show-react");
 }
@@ -77,10 +81,14 @@ window.addEventListener(
   "mouseup",
   () => footerAction.classList.contains("show-react") && toggleMoreReacts()
 );
+actionBtn.addEventListener("click", showMoreAction);
+window.addEventListener(
+  "mouseup",
+  () => moreAction.classList.contains("show") && showMoreAction()
+);
 moreReactButtons.addEventListener("mouseup", (e) => e.stopPropagation());
 commentsButton.addEventListener("click", toggleComments);
 btnCloseComments.addEventListener("click", toggleComments);
-
 like.addEventListener("click", () => ((state.react = "like"), updateState()));
 love.addEventListener("click", () => ((state.react = "love"), updateState()));
 laugh.addEventListener("click", () => ((state.react = "laugh"), updateState()));
